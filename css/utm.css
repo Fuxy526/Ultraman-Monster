@@ -1,0 +1,878 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*身体*/
+body{
+	background-color: #FFF5F5;
+}
+
+/*----------------------------------------------奥特曼部分------------------------------------------------------*/
+/*奥特曼容器*/
+.ultraman_wrapper{
+	position: absolute;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin-left: -100px;
+}
+
+/*奥特曼整体 用于定位*/
+.ultraman_inner{
+	position: absolute;
+	top: 243px;
+	left: 500px;
+	animation: uback 2s linear infinite;
+	-webkit-animation: uback 2s linear infinite;
+}
+
+/*奥特曼退后动画*/
+@keyframes uback{
+	0%{transform: translate(0,0);}
+	10%{transform: translate(10px,0);}
+	20%{transform: translate(0,0);}
+	100%{transform: translate(0,0);}
+}
+@-webkit-keyframes uback{
+	0%{-webkit-transform: translate(0,0);}
+	10%{-webkit-transform: translate(10px,0);}
+	20%{-webkit-transform: translate(0,0);}
+	100%{-webkit-transform: translate(0,0);}
+}
+
+/*所有奥特曼身体部分*/
+.ultraman{
+	position: absolute;
+}
+
+/*头*/
+.head{
+	width: 160px;
+	height: 150px;
+	border-radius: 50%;
+	border: 5px solid #000;
+	top: 20px;
+	background-color: #eee;
+	transform: rotate(8deg);
+	-webkit-transform: rotate(8deg);
+}
+
+/*鼻子*/
+.nose{
+	width: 15px;
+	height: 90px;
+	border: 4px solid #000;
+	border-top-left-radius: 50% 20%;
+	border-top-right-radius: 50% 20%;
+	border-bottom-left-radius: 50% 80%;
+	border-bottom-right-radius: 50% 80%;
+	top: 5px;
+	left: 82px;
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	background-color: #eee;
+}
+
+/*左眼*/
+.lefteye{
+	width: 55px;
+	height: 40px;
+	border: 4px solid #000;
+	border-radius: 50%;
+	background-color: yellow;
+	top: 70px;
+	left: 12px;
+	transform: rotate(36deg);
+	-webkit-transform: rotate(36deg);
+	animation: lighteye 2s linear infinite;
+	-webkit-animation: lighteye 2s linear infinite;
+}
+
+/*右眼*/
+.righteye{
+	width: 55px;
+	height: 40px;
+	border: 4px solid #000;
+	border-radius: 50%;
+	background-color: yellow;
+	top: 82px;
+	left: 95px;
+	transform: rotate(-16deg);
+	-webkit-transform: rotate(-16deg);
+	animation: lighteye 2s linear infinite;
+	-webkit-animation: lighteye 2s linear infinite;
+}
+
+/*眼睛发光动画*/
+@keyframes lighteye{
+	0%{background-color: yellow;}
+	100%{background-color: orange;}
+}
+@-webkit-keyframes lighteye{
+	0%{background-color: yellow;}
+	100%{background-color: orange;}
+}
+
+/*汗滴*/
+.sweat{
+	width: 15px;
+	height: 15px;
+	border: 3px solid #000;
+	background-color: whitesmoke;
+	transform:  rotate(25deg);
+	-webkit-transform:  rotate(25deg);
+	border-radius: 0 40px 20px 40px;
+	top: 46px;
+	left: 111px;
+	animation: sweatmove 2s linear infinite;
+	-webkit-animation: sweatmove 2s linear infinite;
+}
+
+/*汗滴动画*/
+@keyframes sweatmove{
+	0%{top: 46px;left: 111px;}
+	40%{top: 46px;left: 111px;}
+	60%{top: 55px; left: 120px;}
+	100%{top: 55px; left: 120px;}
+}
+@-webkit-keyframes sweatmove{
+	0%{top: 46px;left: 111px;}
+	40%{top: 46px;left: 111px;}
+	60%{top: 55px; left: 120px;}
+	100%{top: 55px; left: 120px;}
+}
+
+/*左耳*/
+.leftear{
+	width: 20px;
+	height: 40px;
+	border-top-left-radius: 25px 40px;
+	border-bottom-left-radius: 25px 40px;
+	border-top-right-radius: 25px 40px;
+	border-bottom-right-radius: 25px 40px;
+	background-color: #eee;
+	border: 3px solid #000;
+	top: 77px;
+	left: -10px;
+	z-index: -1;
+	transform: rotate(-12deg);
+	-webkit-transform: rotate(-12deg);
+}
+
+/*右耳*/
+.rightear{
+	width: 20px;
+	height: 40px;
+	border-top-left-radius: 25px 40px;
+	border-bottom-left-radius: 25px 40px;
+	border-top-right-radius: 25px 40px;
+	border-bottom-right-radius: 25px 40px;
+	background-color: #eee;
+	border: 3px solid #000;
+	top: 93px;
+	left: 153px;
+	z-index: -1;
+	transform: rotate(13deg);
+	-webkit-transform: rotate(13deg);
+}
+
+/*左臂*/
+.leftarm{
+	width: 105px;
+	height: 40px;
+	border: 4px solid #000;
+	background-color: #eee;
+	border-top-left-radius: 20px 15px;
+	border-bottom-left-radius: 70px 30px;
+	border-top-right-radius: 15px 15px;
+	border-bottom-right-radius: 15px 15px;
+	top: 160px;
+	left: 0px;
+	transform: rotate(-8deg);
+	-webkit-transform: rotate(-8deg);
+	z-index: 2;
+}
+
+/*右臂*/
+.rightarm{
+	width: 28px;
+	height: 50px;
+	border: 4px solid #000;
+	background-color: #eee;
+	border-top-left-radius: 50px 80px;
+	border-top-right-radius: 50px 80px;
+	border-bottom-left-radius: 40px 60px;
+	border-bottom-right-radius: 40px 60px;
+	top: 125px;
+	left: -2px;
+	transform: rotate(-22deg);
+	-webkit-transform: rotate(-22deg);
+}
+
+/*身体*/
+.body{
+	width: 80px;
+	height: 55px;
+	border: 4px solid #000;
+	background-color: #eee;
+	border-top-left-radius: 80px 40px;
+	border-bottom-left-radius: 90px 40px;
+	border-top-right-radius: 55px 40px;
+	border-bottom-right-radius: 20px 20px;
+	top: 157px;
+	left: 35px;
+	transform: rotate(-13deg);
+	-webkit-transform: rotate(-13deg);
+	z-index: 1;
+}
+
+/*左腿*/
+.leftleg{
+	width: 40px;
+	height: 35px;
+	border: 4px solid #000;
+	background-color: #eee;
+	border-top-left-radius: 80px 40px;
+	border-bottom-left-radius: 80px 40px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	top: 218px;
+	left: 2px;
+	transform: rotate(-35deg);
+	-webkit-transform: rotate(-35deg);
+	z-index: 1;
+}
+
+/*右腿*/
+.rightleg{
+	width: 50px;
+	height: 36px;
+	border: 4px solid #000;
+	background-color: #eee;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 80px 40px;
+	border-bottom-right-radius: 80px 40px;
+	top: 221px;
+	left: 107px;
+	transform: rotate(32deg) skew(-20deg);
+	-webkit-transform: rotate(32deg) skew(-20deg);
+	z-index: 1
+}
+
+/*背*/
+.back{
+	width: 7px;
+	height: 26px;
+	border-top-right-radius: 20px 80px;
+	border: 3px solid #000;
+	background-color: red;
+	top: 163px;
+	left: 110px;
+	transform: rotate(-7deg);
+	-webkit-transform: rotate(-7deg);
+	z-index: 1
+}
+
+/*裤子*/
+.pants{
+	width: 120px;
+	height: 50px;
+	background-color: red;
+	top: 192px;
+	left: 20px;
+}
+
+/*裆部*/
+.legbetween{
+	width: 50px;
+	height: 30px;
+	border-top: 4px solid #000;
+	background-color: #FFF5F5;
+	border-top-left-radius: 80px 40px;
+	border-bottom-left-radius: 80px 40px;
+	border-top-right-radius: 80px 40px;
+	border-bottom-right-radius: 80px 40px;
+	top: 236px;
+	left: 54px;
+	transform: rotate(3deg);
+	-webkit-transform: rotate(3deg);
+}
+
+/*遮挡物1*/
+.plus_1{
+	width: 23px;
+	height: 23px;
+	border-right: 4px solid #000;
+	background-color: #FFF5F5;
+	top: 193px;
+	left: 9px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+/*遮挡物2*/
+.plus_2{
+	width: 31px;
+	height: 31px;
+	background-color: #FFF5F5;
+	border-bottom: 4px solid #000;
+	top: 183px;
+	left: 125px;
+	transform: rotate(60deg);
+	-webkit-transform: rotate(60deg);
+}
+
+/*这档物3*/
+.plus_3{
+	width: 30px;
+	height: 20px;
+	background-color: #eee;
+	z-index: 3;
+	top: 185px;
+	left: 81px;
+	transform: rotate(-8deg);
+	-webkit-transform: rotate(-8deg);
+}
+
+/*----------------------------------------------奥特曼光波及其动画------------------------------------------------------*/
+/*光波容器*/
+.light_wrapper{
+	position: absolute;
+	width: 676px;
+	height: 50px;
+	left: 50%;
+	margin-left: -338px;
+}
+
+/*光波*/
+.light{
+	position: absolute;
+	background-color: yellow;
+	height: 35px;
+	top: 375px;
+	border-radius: 8px;
+	animation: lightmove 2s linear infinite;
+	-webkit-animation: lightmove 2s linear infinite;
+}
+
+/*光波动画*/
+@keyframes lightmove{
+	0%{width: 0; right: -57px;}
+	100%{width: 400px; right: -57px;}
+}
+@-webkit-keyframes lightmove{
+	0%{width: 0; right: -57px;}
+	100%{width: 400px; right: -57px;}
+}
+
+/*光波中心*/
+.light_center{
+	height: 60%;
+	width: 100%;
+	background-color: #FFF500;
+	position: absolute;
+	top: 7px;
+}
+
+/*----------------------------------------------怪兽部分------------------------------------------------------*/
+/*怪兽容器*/
+.monster_wrapper{
+	position: absolute;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	margin-left: -100px;
+}
+
+/*怪兽整体 用于定位*/
+.monster_inner{
+	position: absolute;
+	top: 243px;
+	right: 500px;
+	animation: mback 2s linear infinite;
+	-webkit-animation: mback 2s linear infinite;
+}
+
+/*怪兽后退动画*/
+@keyframes mback{
+	0%{transform: translate(0,0);}
+	10%{transform: translate(-10px,0);}
+	20%{transform: translate(0,0);}
+	100%{transform: translate(0,0);}
+}
+@-webkit-keyframes mback{
+	0%{-webkit-transform: translate(0,0);}
+	10%{-webkit-transform: translate(-10px,0);}
+	20%{-webkit-transform: translate(0,0);}
+	100%{-webkit-transform: translate(0,0);}
+}
+
+/*所有怪兽的身体部分*/
+.monster{
+	position: absolute;
+	right: 30px;
+}
+
+/*头*/
+.mhead{
+	width: 160px;
+	height: 160px;
+	border-radius: 50% 50% 50% 40%;
+	border: 4px solid #000;
+	background-color: #5CA65C;
+	top: 20px;
+	right: 0px;
+}
+
+/*左眼*/
+.mlefteye{
+	width: 26px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #000;
+	top: 50px;
+	right: 90px;
+}
+
+/*右眼*/
+.mrighteye{
+	width: 26px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #000;
+	top: 50px;
+	right: 24px;
+}
+
+/*眼白*/
+.meyeinner{
+	width: 10px;
+	height: 15px;
+	position: absolute;
+	top: 6px;
+	left: 4px;
+	background-color: white;
+	border-radius: 50%;
+	animation: eyemove 2s linear infinite;
+	-webkit-animation: eyemove 2s linear infinite;
+}
+
+/*眼白移动动画*/
+@keyframes eyemove{
+	0%{transform: translate(0,0);}
+	50%{transform: translate(3px,0px);}
+	100%{transform: translate(0,0);}
+}
+@-webkit-keyframes eyemove{
+	0%{-webkit-transform: translate(0,0);}
+	50%{-webkit-transform: translate(3px,0px);}
+	100%{-webkit-transform: translate(0,0);}
+}
+
+/*嘴*/
+.mmouse{
+	width: 40px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #000;
+	top: 105px;
+	right: 18px;
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	z-index: 1;
+	animation: openmouse 2s ease-in infinite;
+	-webkit-animation: openmouse 2s ease-in infinite;
+}
+
+/*张嘴动画*/
+@keyframes openmouse{
+	0%{width: 40px; height: 60px;}
+	50%{width: 20px; height: 30px; top: 115px; right: 25px;}
+	100%{width: 40px; height: 60px;}
+}
+@-webkit-keyframes openmouse{
+	0%{width: 40px; height: 60px;}
+	50%{width: 20px; height: 30px; top: 115px; right: 25px;}
+	100%{width: 40px; height: 60px;}
+}
+
+/*身体*/
+.mbody{
+	width: 110px;
+	height: 90px;
+	background-color: #5CA65C;
+	border-radius: 50% 50% 35% 15%;
+	border: 4px solid #000;
+	top: 150px;
+	right: 25px;
+	z-index: -1;
+}
+
+/*左臂*/
+.mleftarm{
+	width: 50px;
+	height: 50px;
+	border: 4px solid #000;
+	background-color: #5CA65C;
+	top: 165px;
+	border-radius: 6px;
+	transform: rotate(-2deg) skew(25deg);
+	-webkit-transform: rotate(-2deg) skew(25deg);
+	right: 24px;
+	z-index: -2;
+}
+
+/*右臂*/
+.mrightarm{
+	width: 16px;
+	height: 30px;
+	border-left: 4px solid #000;
+	border-bottom: 4px solid #000;
+	background-color: #5CA65C;
+	top: 187px;
+	right: 122px;
+	border-bottom-left-radius: 6px;
+	transform: rotate(0deg) skew(-25deg);
+	-webkit-transform: rotate(0deg) skew(-25deg);
+	z-index: 1;
+}
+
+/*肚子*/
+.mdome{
+	height: 50px;
+	width: 80px;
+	border: 3px solid #000;
+	background-color: white;
+	border-radius: 50% 50% 40% 30%;
+	top: 190px;
+	right: 35px;
+}
+
+/*尾巴*/
+.mtail{
+	width: 40px;
+	height: 30px;
+	background-color: #5CA65C;
+	border-bottom: 4px solid #000;
+	top: 214px;
+	right: 125px;
+}
+
+/*左腿*/
+.mleftleg{
+	width: 15px;
+	height: 15px;
+	border-bottom: 3px solid #000;
+	border-right: 3px solid #000;
+	background-color: #5CA65C;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	top: 237px;
+	right: 99px;
+	z-index: -1;
+}
+
+/*右腿*/
+.mrightleg{
+	width: 15px;
+	height: 15px;
+	border-bottom: 3px solid #000;
+	border-right: 3px solid #000;
+	background-color: #5CA65C;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	top: 237px;
+	right: 54px;
+	z-index: -1;
+}
+
+/*遮挡物1*/
+.mplus_1{
+	width: 125px;
+	height: 122px;
+	border-radius: 50% 0 40% 50%;
+	border-right: 4px solid #000;
+	background-color: #FFF5F5;
+	top: 134px;
+	right: 140px;
+	transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+	z-index: 0;
+}
+
+/*遮挡物2*/
+.mplus_2{
+	width: 100px;
+	height: 30px;
+	background-color: #5CA65C;
+	top: 158px;
+	right: 38px;
+}
+
+/*遮挡物3*/
+.mplus_3{
+	width: 15px;
+	height: 28px;
+	background-color: #5CA65C;
+	top: 161px;
+	right: 128px;
+	transform: rotate(-20deg);
+	-webkit-transform: rotate(-20deg);
+}
+
+/*背上尖尖1*/
+.mback_1{
+	height: 30px;
+	width: 30px;
+	border: 4px solid #000;
+	border-radius: 5px;
+	background-color: #5CA65C;
+	transform: rotate(35deg);
+	-webkit-transform: rotate(35deg);
+	right: 75px;
+	top: 7px;
+	z-index: -1;
+}
+
+/*背上尖尖2*/
+.mback_2{
+	height: 30px;
+	width: 30px;
+	border: 4px solid #000;
+	border-radius: 5px;
+	background-color: #5CA65C;
+	transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	right: 112px;
+	top: 24px;
+	z-index: -1;
+}
+
+/*背上尖尖3*/
+.mback_3{
+	height: 30px;
+	width: 30px;
+	border-radius: 5px;
+	border: 4px solid #000;
+	background-color: #5CA65C;
+	transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+	right: 132px;
+	top: 52px;
+	z-index: -1;
+}
+
+/*背上尖尖4*/
+.mback_4{
+	height: 30px;
+	width: 30px;
+	border: 4px solid #000;
+	border-radius: 5px;
+	background-color: #5CA65C;
+	transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	right: 136px;
+	top: 82px;
+	z-index: -1;
+}
+
+/*----------------------------------------------怪兽火焰及其动画------------------------------------------------------*/
+/*火焰容器*/
+.fire_wrapper{
+	position: absolute;
+	width: 676px;
+	height: 50px;
+	left: 50%;
+	margin-left: -338px;
+}
+
+/*火焰*/
+.fire{
+	position: absolute;
+	height: 35px;
+	top: 371px;
+	left: -55px;
+	animation: firemove 2s linear infinite;
+	-webkit-animation: firemove 2s linear infinite;
+}
+
+/*火焰动画*/
+@keyframes firemove{
+	0%{ left: -55px;}
+	100%{ left: 255px;}
+}
+@-webkit-keyframes firemove{
+	0%{ left: -55px;}
+	100%{ left: 255px;}
+}
+
+/*火焰第一部分*/
+.fire_p1{
+	position: absolute;
+	height: 40px;
+	width: 60px;
+	background-color: red;
+	border: 3px solid #000;
+	border-radius: 0 50% 50% 0;
+}
+
+/*火焰第二部分*/
+.fire_p2{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	background-color: #FFF5F5;
+	border-top: 3px solid #000;
+	border-right: 3px solid #000;
+	border-bottom-left-radius: 50%;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	top: 6px;
+	right: -17px;
+}
+
+/*火焰第三部分*/
+.fire_p3{
+	position: absolute;
+	height: 20px;
+	width: 30px;
+	background-color: red;
+	border-bottom: 3px solid #000;
+	border-left: 3px solid #000;
+	transform: skew(-45deg) rotate(10deg);
+	-webkit-transform: skew(-45deg) rotate(10deg);
+	top: 10px;
+	right: -32px;
+}
+
+/*----------------------------------------------背景部分------------------------------------------------------*/
+/*地平线*/
+.horizon{
+	height: 8px;
+	width: 100%;
+	position: absolute;
+	top: 500px;
+	background-color: #000;
+}
+
+/*云*/
+.cloud{
+	position: absolute;
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+}
+
+/*云容器*/
+.cloud_inner{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	animation: cloudmove 60s linear infinite;
+	-webkit-animation: cloudmove 60s linear infinite;
+}
+
+/*云移动动画*/
+@keyframes cloudmove{
+	0%{left: 0}
+	25%{left: -100px;}
+	50%{left: 0}
+	75%{left: 100px;}
+	100%{left: 0}
+}
+@-webkit-keyframes cloudmove{
+	0%{left: 0}
+	25%{left: -100px;}
+	50%{left: 0}
+	75%{left: 100px;}
+	100%{left: 0}
+}
+
+/*云第一部分*/
+.cloud_p1{
+	height: 60px;
+	width: 150px;
+	background-color: white;
+	border-left: 4px solid #000;
+	border-bottom: 4px solid #000;
+	border-right: 4px solid #000;
+	border-top: 4px solid #000;
+	border-radius: 50% 50% 50% 50%;
+	position: absolute;
+	top: 70px;
+}
+
+/*云第二部分*/
+.cloud_p2{
+	height: 60px;
+	width: 60px;
+	border-top: 4px solid #000;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	top: 60px;
+	left: -2px;
+	transform: rotate(-22deg);
+	-webkit-transform: rotate(-22deg);
+}
+
+/*云第三部分*/
+.cloud_p3{
+	height: 60px;
+	width: 60px;
+	border-top: 4px solid #000;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	top: 60px;
+	left: 100px;
+	transform: rotate(22deg);
+	-webkit-transform: rotate(22deg);
+}
+
+/*云第四部分*/
+.cloud_p4{
+	height: 80px;
+	width: 80px;
+	border-top: 4px solid #000;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+}
+
+/*----------------------------------------------底部标题和版权部分------------------------------------------------------*/
+/*底部*/
+.footer{
+	text-align: center;
+	position: absolute;
+	top: 530px;
+	left: 50%;
+}
+
+/*标题*/
+.title{
+	color: #666;
+	font-size: 24px;
+	font-weight: bold;
+	display: inline-block;
+	font-family: "Comic Sans MS";
+	width: 300px;
+	position: absolute;
+	margin-left: -150px;
+}
+
+/*版权*/
+.copyright{
+	color: #666;
+	font-size: 12px;
+	display: inline-block;
+	font-family: "Comic Sans MS";
+	width: 200px;
+	position: absolute;
+	margin-left: -100px;
+	top: 45px;
+}
